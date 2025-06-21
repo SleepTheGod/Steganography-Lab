@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PHP Stego Lab</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 600px; margin: auto; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; }
+        input, textarea, select { width: 100%; padding: 8px; }
+        button { padding: 10px 20px; background: #007bff; color: white; border: none; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PHP Stego Lab</h1>
+        <p>Encode or decode payloads in JPEG images using AES-256-CBC and LSB steganography.</p>
+        <form action="stego_lab.php" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="mode">Mode:</label>
+                <select name="mode" id="mode">
+                    <option value="encode">Encode</option>
+                    <option value="decode">Decode</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="input">Input JPEG:</label>
+                <input type="file" name="input" id="input" accept="image/jpeg" required>
+            </div>
+            <div class="form-group">
+                <label for="key">AES Key (32 bytes):</label>
+                <input type="text" name="key" id="key" value="<?php echo htmlspecialchars(DEFAULT_AES_KEY); ?>" required>
+            </div>
+            <div class="form-group">
+                <label for="payload">Payload (for encode):</label>
+                <textarea name="payload" id="payload" rows="5"></textarea>
+            </div>
+            <button type="submit">Process</button>
+        </form>
+    </div>
+</body>
+</html>
