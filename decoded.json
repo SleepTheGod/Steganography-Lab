@@ -1,0 +1,6 @@
+{
+    "timestamp": "2025-06-21T16:15:00+00:00",
+    "decoded": "/* Simulated reverse shell for lab (disabled) */\n$host = '127.0.0.1';\n$port = 4444;\n// $sock = fsockopen($host, $port);\n// while ($cmd = fgets($sock)) {\n//     $output = shell_exec($cmd);\n//     fwrite($sock, $output);\n// }\n/* Simulated PowerShell payload (base64-encoded, not executed) */\n$ps = 'Write-Output \"Simulated PowerShell payload\"';\n$ps_b64 = base64_encode($ps);\n/* Simulated Bash payload (base64-encoded, not executed) */\n$bash = 'echo \"Simulated Bash payload\"';\n$bash_b64 = base64_encode($bash);\necho \"Shell payload logged for lab. PowerShell: $ps_b64, Bash: $bash_b64\";",
+    "source": "output.jpg",
+    "os": "Linux"
+}
