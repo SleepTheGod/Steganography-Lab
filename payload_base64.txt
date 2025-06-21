@@ -1,0 +1,8 @@
+# Simulated PowerShell Payload (base64-encoded)
+V3JpdGUtT3V0cHV0ICJTaW11bGF0ZWQgUG93ZXJTaGVsbCBwYXlsb2FkIg==
+
+# Simulated Bash Payload (base64-encoded)
+ZWNobyAiU2ltdWxhdGVkIEJhc2ggcGF5bG9hZCI=
+
+# Simulated Keylogger Output (base64-encoded)
+ZWNobyAiS2V5c3Ryb2tlczogU2ltdWxhdGVkIGtleWxvZ2dlciBvdXRwdXQi
